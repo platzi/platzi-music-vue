@@ -40,3 +40,14 @@ touch .eslintrc
   "extends": "standard"
 }
 ```
+5. Customizar eslint deshabilitando la regla `no-new` (establecida por standardjs):
+
+```json
+{
+  "extends": "standard",
+
+  "rules": {
+    "no-new": 0
+  }
+}
+```
