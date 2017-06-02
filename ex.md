@@ -2,52 +2,49 @@
 
 ## Temas
 
-1. Introduccion a linters y eslint
-2. Introduccion a standardjs
-3. Instalacion de eslint con standardjs
+1. Introduccion a sass y preprocesadores
+2. Configuracion de sass y demostracion
 
 
 ## Links
 
-[eslint](http://eslint.org/)
-[standardjs](https://standardjs.com/)
-[eslint-standard-config](https://github.com/feross/eslint-config-standard)
+[sass](http://sass-lang.com)
+[sass-loader](https://github.com/webpack-contrib/sass-loader)
 
 
 ## Practica
 
-1. Instalar eslint
+1. Crear `./scss/main.scss`
 
 ```bash
-$ npm i -D eslint
+$ touch scss/main.scss
 ```
 
-2. Instalar eslint-config-standard
-```bash
-$ npm i -D eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
+2. Cambiar configuracion webpack
+```javascript
+
+rules: [
+  {
+    test: /\.(vue|scss)$/, // solo cambiamos esta linea para que webpack pueda procesar archivos .scss
+    loader: 'vue-loader',
+    options: {
+      loaders: {
+        'scss': 'vue-style-loader!css-loader!sass-loader',
+        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+      }
+    }
+  },
 ```
 
-3. Crear archivo `.eslintrc`
+3. Agregamos algunos estilos de prueba en el archivo `./scss/main.scss`
 
-```bash
-touch .eslintrc
-```
+```css
+html {
+  color: #fff;
+  background: #3d3d3d !important;
 
-4. Configurar eslint para utilizar standardjs, escribir el siguente contenido en `.eslintrc`:
-
-```json
-{
-  "extends": "standard"
-}
-```
-5. Customizar eslint deshabilitando la regla `no-new` (establecida por standardjs):
-
-```json
-{
-  "extends": "standard",
-
-  "rules": {
-    "no-new": 0
+  a {
+    color: #fff
   }
 }
 ```
