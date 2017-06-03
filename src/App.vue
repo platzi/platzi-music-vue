@@ -1,9 +1,7 @@
-<template>
-  <main id="app">
-    <section class="section">
-      <h1 class="title"> {{ title }}</h1>
-    </section>
-  </main>
+<template lang="pug">
+  main#app
+    section.section
+      h1.title  {{ title }}
 </template>
 
 <script>

@@ -2,59 +2,18 @@
 
 ## Temas
 
-1. Introduccion a sass y preprocesadores
-2. Configuracion de sass y demostracion
+1. Introduccion a pug y preprocesadores
+2. Configuracion de pug y demostracion
 
 
 ## Links
 
-[sass](http://sass-lang.com)
-[sass-loader](https://github.com/webpack-contrib/sass-loader)
+[pug](http://sass-lang.com)
+[pug-loader](https://github.com/webpack-contrib/sass-loader)
 
 
 ## Practica
 
-1. Crear `./scss/main.scss`
-
-```bash
-$ touch scss/main.scss
-```
-
-2. Cambiar configuracion webpack
-```javascript
-
-rules: [
-  {
-    test: /\.(vue|scss)$/, // solo cambiamos esta linea para que webpack pueda procesar archivos .scss
-    loader: 'vue-loader',
-    options: {
-      loaders: {
-        'scss': 'vue-style-loader!css-loader!sass-loader',
-        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-      }
-    }
-  },
-```
-
-3. Agregamos algunos estilos de prueba en el archivo `./scss/main.scss`
-
-```css
-html {
-  color: #fff;
-  background: #3d3d3d !important;
-
-  a {
-    color: #fff
-  }
-}
-```
-
-4. Instalamos el framework css [bulma]():
-
-```bash
-$ npm i -S bulma
-```
-
-5. Importamos bulma en `main.scss`
-
-6. Limpiamos el `App.vue` borrando lo que no necesitamos y creamos la [estrutura basica de bulma](http://bulma.io/documentation/layout/container/)
+1. Instalar pug y pug-loader
+2. Cambiar App.vue para usar pug
+3. Crear componentes de estilo Layout (footer header y main) usando pug y bulma
