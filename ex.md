@@ -56,3 +56,5 @@ $ npm i -S bulma
 ```
 
 5. Importamos bulma en `main.scss`
+
+6. Limpiamos el `App.vue` borrando lo que no necesitamos y creamos la [estrutura basica de bulma](http://bulma.io/documentation/layout/container/)
