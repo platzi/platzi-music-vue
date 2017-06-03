@@ -9,7 +9,7 @@
       .container
         p(v-show="searchQuery")
           small {{ queryMessage }}
-      .container
+      .container.results
         .columns(v-show="tracks.length")
           .column(v-for="r in tracks") {{ `Track #${r}` }}
 </template>
@@ -49,5 +49,9 @@ export default {
     a.is-danger {
       margin-left: 4px;
     }
+  }
+
+  .results {
+    margin-top: 20px;
   }
 </style>
