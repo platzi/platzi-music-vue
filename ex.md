@@ -54,3 +54,5 @@ html {
 ```bash
 $ npm i -S bulma
 ```
+
+5. Importamos bulma en `main.scss`
