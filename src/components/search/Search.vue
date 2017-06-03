@@ -2,16 +2,16 @@
   section.section
     .container
       nav.nav.has-shadow
-       .container
-          a.is-reset(@click.prevent="reset") X
+       .container.search-bar
           input.input.is-large(type="text" placeholder="Busca una cancion", v-model="searchQuery")
-          button.button.is-info.is-large(@click="search") Buscar
+          a.button.is-info.is-large(@click.prevent="search") Buscar
+          a.button.is.is-danger.is-large(@click.prevent="reset") &times;
       .container
         p(v-show="searchQuery")
           small {{ queryMessage }}
       .container
         .columns(v-show="tracks.length")
-          .column(v-for="r in tracks") {{ r }}
+          .column(v-for="r in tracks") {{ `Track #${r}` }}
 </template>
 
 <script>
@@ -32,7 +32,8 @@ export default {
 
   methods: {
     search () {
-      this.tracks = [1, 2, 3]
+      if (!this.searchQuery) { return }
+      this.tracks = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]
     },
 
     reset () {
@@ -43,5 +44,10 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+  .search-bar {
+    a.is-danger {
+      margin-left: 4px;
+    }
+  }
 </style>
