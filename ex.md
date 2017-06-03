@@ -48,3 +48,9 @@ html {
   }
 }
 ```
+
+4. Instalamos el framework css [bulma]():
+
+```bash
+$ npm i -S bulma
+```
