@@ -17,3 +17,4 @@
 1. Instalar pug y pug-loader
 2. Cambiar App.vue para usar pug
 3. Crear componentes de estilo Layout (footer header y main) usando pug y bulma
+4. Instalar eslint-html y configurarlo
