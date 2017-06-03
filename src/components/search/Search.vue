@@ -1,11 +1,21 @@
 <template lang="pug">
   section.section
     .container
-       h1.title Buscar Canciones
+      nav.nav.has-shadow
+       .container
+          input.input.is-large(type="text" placeholder="Busca una cancion")
+          p
+            small {{ searchQuery }}
 </template>
 
 <script>
 export default {
+
+  data () {
+    return {
+      searchQuery: ''
+    }
+  }
 }
 </script>
 
