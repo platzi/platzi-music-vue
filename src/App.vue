@@ -17,8 +17,8 @@
           small {{ searchMessage }}
 
       .container.results
-        .columns
-          .column(v-for="t in tracks")
+        .columns.is-multiline
+          .column.is-one-quarter(v-for="t in tracks")
             pm-track(:track="t")
 
     pm-footer

@@ -14,12 +14,12 @@
             strong {{ track.name }}
           p.subtitle.is-6 {{ track.artists[0].name }}
 
-        .content
-          small {{ track.duration_ms }}
-          nav.level
-            .level-left
-              a.level-item
-                span.icon.is-small ▶️
+      .content
+        small {{ track.duration_ms }}
+        nav.level
+          .level-left
+            a.level-item
+              span.icon.is-small ▶️
 </template>
 
 <script>
