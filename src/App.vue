@@ -1,5 +1,7 @@
 <template lang="pug">
   #app
+    pm-header
+
     section.section
       nav.nav.has-shadow
         .container
@@ -25,11 +27,12 @@
 <script>
 import trackService from './services/track'
 import PmFooter from './components/layout/Footer.vue'
+import PmHeader from './components/layout/Header.vue'
 
 export default {
   name: 'app',
 
-  components: { PmFooter },
+  components: { PmFooter, PmHeader },
 
   data () {
     return {
