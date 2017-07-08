@@ -1,9 +1,19 @@
 <template lang="pug">
   #app
-    input(v-model="name")
-    button(@click="format") Format
+    section.section
+      nav.nav.has-shadow
+        .container
+          input.input.is-large(
+            type="text",
+            placeholder="Buscar canciones",
+            v-model="searchQuery"
+          )
+          a.button.is-info.is-large(@click="search") Buscar
+          a.button.is-danger.is-large &times;
 
-    p {{ formattedName }}
+      .container
+        .columns
+          .column
 </template>
 
 <script>
@@ -12,15 +22,13 @@ export default {
 
   data () {
     return {
-      name: '',
-
-      formattedName: ''
+      searchQuery: ''
     }
   },
 
   methods: {
-    format () {
-      this.formattedName = this.name.split(' ').join('-').toUpperCase()
+    search () {
+      console.log(this.searchQuery)
     }
   }
 }
