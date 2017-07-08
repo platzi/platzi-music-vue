@@ -19,7 +19,7 @@
       .container.results
         .columns
           .column(v-for="t in tracks")
-            | {{ t.name }} - {{ t.artists[0].name }}
+            pm-track(:track="t")
 
     pm-footer
 </template>
@@ -29,10 +29,12 @@ import trackService from '@/services/track'
 import PmFooter from '@/components/layout/Footer.vue'
 import PmHeader from '@/components/layout/Header.vue'
 
+import PmTrack from '@/components/Track.vue'
+
 export default {
   name: 'app',
 
-  components: { PmFooter, PmHeader },
+  components: { PmFooter, PmHeader, PmTrack },
 
   data () {
     return {
