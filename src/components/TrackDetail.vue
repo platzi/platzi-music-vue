@@ -12,7 +12,7 @@
       .column.is-8
         .panel
           .panel-heading
-            h1.title {{ track.name }}
+            h1.title {{ trackTitle }}
           .panel-block
             .article-media
               .media-content
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
 import trackMixin from '@/mixins/track'
 
@@ -36,7 +36,8 @@ export default {
   mixins: [trackMixin],
 
   computed: {
-    ...mapState(['track'])
+    ...mapState(['track']),
+    ...mapGetters(['trackTitle'])
   },
 
   created () {

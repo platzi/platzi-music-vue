@@ -10,6 +10,13 @@ const store = new Vuex.Store({
     track: {}
   },
 
+  getters: {
+    trackTitle (state) {
+      if (!state.track.name) { return '' }
+      return `${state.track.name} - ${state.track.artists[0].name}`
+    }
+  },
+
   mutations: {
     setTrack (state, track) {
       state.track = track
