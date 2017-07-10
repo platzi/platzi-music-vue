@@ -6,7 +6,7 @@
       )
     p
       strong {{ track.name }}
-      small [{{ track.duration_ms }}]
+      small [{{ track.duration_ms | ms-to-mm }}]
     p
       audio(controls, :src="track.preview_url")
 </template>

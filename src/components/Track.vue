@@ -15,7 +15,7 @@
           p.subtitle.is-6 {{ track.artists[0].name }}
 
       .content
-        small {{ track.duration_ms }}
+        small {{ track.duration_ms | ms-to-mm }}
         nav.level
           .level-left
             button.level-item.button.is-primary
