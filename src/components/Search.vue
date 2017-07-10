@@ -23,6 +23,7 @@
         .columns.is-multiline
           .column.is-one-quarter(v-for="t in tracks")
             pm-track(
+              v-blur="t.preview_url",
               :class="{ 'is-active': t.id === selectedTrack }",
               :track="t",
               @select="setSelectedTrack"
