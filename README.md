@@ -23,8 +23,8 @@
 1. [Comunicación Componentes Hijos - Padres](https://github.com/platzi/platzi-music-vue/tree/video25) - Video 27
 1. [Utilización de Slots](https://github.com/platzi/platzi-music-vue/tree/video26) - Video 28
 1. [Comunicacion entre Componentes Genericos - Event Bus y Plugins](https://github.com/platzi/platzi-music-vue/tree/video27) - Video 29
-1. [Comunicacion entre Componentes Genericos - Event Bus y Plugins](https://github.com/platzi/platzi-music-vue/tree/video29) - Video 31
-1. [Comunicacion entre Componentes Genericos - Event Bus y Plugins](https://github.com/platzi/platzi-music-vue/tree/video30) - Video 32
+1. [Introducción a Vue Router](https://github.com/platzi/platzi-music-vue/tree/video29) - Video 31
+1. [Introducción a Vue Router](https://github.com/platzi/platzi-music-vue/tree/video30) - Video 32
 1. [Modifiers](https://github.com/platzi/platzi-music-vue/tree/video31) - Video 33
 1. [Directivas Personalizadas](https://github.com/platzi/platzi-music-vue/tree/video32) - Video 34
 1. [Filtros](https://github.com/platzi/platzi-music-vue/tree/video33) - Video 35
