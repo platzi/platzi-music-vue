@@ -1,18 +1,16 @@
 # platzi-music
 
-> App curso Vue.js de Platzi
+> 📻 Web app para el [Curso Profesional de Vue.js](http://platzi.com/vue)
 
-## Build Setup
+## Instalacion
 
 ``` bash
-# install dependencies
+# instalar dependencias
 npm install
 
-# serve with hot reload at localhost:8080
+# servir aplicacion para desarrollo en localhost:8080
 npm run dev
 
-# build for production with minification
+# compilar aplicacion para distribuir en produccion
 npm run build
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
