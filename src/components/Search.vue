@@ -32,6 +32,13 @@
               :track="t",
               @select="setSelectedTrack"
             )
+        .columns(v-show="tracks.length && !pagination.hasEnd")
+          .column.has-text-centered
+            button.button(
+              @click="loadNextPage()",
+              :class="{ 'is-loading': pagination.isLoading }",
+              :disabled="pagination.isLoading"
+            ) Cargar Mas
 </template>
 
 <script>
@@ -55,13 +62,21 @@ export default {
       isLoading: false,
       showNotification: false,
 
-      selectedTrack: ''
+      selectedTrack: '',
+
+      pagination: {
+        offset: 0,
+        limit: 20,
+        hasEnd: false,
+        isLoading: false,
+        total: 0
+      }
     }
   },
 
   computed: {
     searchMessage () {
-      return `Encontrados: ${this.tracks.length}`
+      return `Encontrados: ${this.pagination.total}`
     }
   },
 
@@ -72,20 +87,43 @@ export default {
           this.showNotification = false
         }, 3000)
       }
+    },
+
+    searchQuery () {
+      this.pagination.offset = 0
+      this.pagination.hasEnd = false
+      this.pagination.isLoading = false
     }
   },
 
   methods: {
-    search () {
+    search (shouldConcat = false) {
       if (!this.searchQuery) { return }
 
       this.isLoading = true
 
       trackService.search(this.searchQuery)
         .then(res => {
+          this.pagination.offset += this.pagination.limit
+          this.pagination.total += res.tracks.total
+
           this.showNotification = res.tracks.total === 0
           this.tracks = res.tracks.items
           this.isLoading = false
+        })
+    },
+
+    loadNextPage () {
+      if (!this.searchQuery) { return }
+
+      this.pagination.isLoading = true
+
+      trackService.search(this.searchQuery, this.pagination.offset)
+        .then(res => {
+          this.pagination.offset += this.pagination.limit
+          this.pagination.hasEnd = res.tracks.next === null
+          this.tracks = [...this.tracks, ...res.tracks.items]
+          this.pagination.isLoading = false
         })
     },
 
