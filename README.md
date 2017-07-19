@@ -33,6 +33,9 @@
 1. [Vuex en Platzi Music](https://github.com/platzi/platzi-music-vue/tree/video41) - Video 43
 1. [Configurar now y Deploy a Produccion](https://github.com/platzi/platzi-music-vue/tree/video46) - Video 48
 
+## Material Bonus
+1. [Paginación](https://github.com/platzi/platzi-music-vue/tree/pagination) - Paginación
+
 
 ## Instalacion
 
