@@ -186,6 +186,6 @@ watch: {
 ```
 
 ---
-Listo, ahora si que nuestra aplicación esta totalmente terminada y nos permite obtener todos los resultados posibles sobre una búsqueda. Ante cualquier consulta, recuerda que podes checar el código funcionando en este [link](https://github.com/platzi/platzi-music-vue/tree/pagination). Espero que puedas implementarlo y no dudes subir tus aporte en la plataforma.
+**Listo, ahora si que nuestra aplicación esta totalmente terminada y nos permite obtener todos los resultados posibles sobre una búsqueda. Ante cualquier consulta, recuerda que podes checar el código funcionando en este [link](https://github.com/platzi/platzi-music-vue/tree/pagination). Espero que puedas implementarlo y no dudes subir tus aporte en la plataforma.**
 
 ![pagination](./img/pagination.gif)
