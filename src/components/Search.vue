@@ -17,11 +17,12 @@
             v-model="searchQuery",
             @keyup.enter="search"
           )
-          a.button.is-info.is-large(@click="search") Buscar
-          a.button.is-danger.is-large &times;
+          a.button.is-info.is-large.search-button(@click="search") Buscar
       .container
-        p
-          small {{ searchMessage }}
+        .row
+          .col-xs-12
+            p.search-text
+              small {{ searchMessage }}
 
       .container.results
         .columns.is-multiline
@@ -76,7 +77,7 @@ export default {
 
   computed: {
     searchMessage () {
-      return `Encontrados: ${this.pagination.total}`
+      return `Elementos Encontrados: ${this.pagination.total}`
     }
   },
 
@@ -137,9 +138,21 @@ export default {
 <style lang="scss">
   .results {
     margin-top: 50px;
-  },
+  }
 
   .is-active {
     border: 3px #23d160 solid;
+  }
+
+  .search-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+    
+  }
+  .search-button {
+    margin-left: 10px;
+    background-color: #1d3743!important;
   }
 </style>

@@ -15,13 +15,13 @@
           p.subtitle.is-6 {{ track.artists[0].name }}
 
       .content
-        small {{ track.duration_ms | ms-to-mm }}
         nav.level
           .level-left
             button.level-item.button.is-primary
               span.icon.is-small(@click="selectTrack") ▶️
             button.level-item.button.is-warning
               span.icon.is-small(@click="goToTrack(track.id)") 🌎
+            small {{ track.duration_ms | ms-to-mm }}
 </template>
 
 <script>
@@ -43,3 +43,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .card {
+      border: 1px solid #dfe0e0;
+      box-shadow: 0 1px 2px rgba(0,0,0,.1);
+      background: #fff;
+      border-radius: .25rem;
+      margin-bottom: 2rem;
+  }
+</style>

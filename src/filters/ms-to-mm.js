@@ -4,7 +4,7 @@ function convertMsToMm (ms) {
   const min = Math.floor(ms / 60000)
   const sec = ((ms % 60000 / 1000).toFixed(0))
 
-  return `${min}:${sec}`
+  return `${min}min ${sec}seg`
 }
 
 msToMm.install = function (Vue) {
