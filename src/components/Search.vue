@@ -137,7 +137,7 @@ export default {
 <style lang="scss">
   .results {
     margin-top: 50px;
-  },
+  }
 
   .is-active {
     border: 3px #23d160 solid;

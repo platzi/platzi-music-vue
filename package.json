@@ -5,6 +5,7 @@
   "author": "Ignacio Anaya <ignacio.anaya89@gmail.com>",
   "private": true,
   "scripts": {
+    "deploy": "now --public && now alias",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "start": "serve --single"
